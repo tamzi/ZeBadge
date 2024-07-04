@@ -1,14 +1,15 @@
 [![Main](https://github.com/gdg-berlin-android/ZeBadge/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/gdg-berlin-android/ZeBadge/actions/workflows/main.yml)
 
 # ZeBadge
+
 ![badgerrpi2040](https://user-images.githubusercontent.com/1162562/236334466-1ccfff65-6744-4304-b4d3-1d200b16ffe8.png)
 
 Droidcon 2023: The time a new badge saw the light of the day, full with delight and android programming capabilities.
 
 Droidcon 2024: Same amazing badge but with better software, extension modules and a splash of AI.
 
-
 # ZeApp
+
 App for configuring static images on your badge from your Android phone. Connect ZeBadge to the phone with a USB cable, select an card to display and hit "Send". Super easy, barely an inconvenience.
 
 You can build ZeApp locally or download the latest build from:
@@ -27,22 +28,26 @@ This magic happens through WebSerial, a ktor backend, the dithering algorithm fr
 ## Building WebApp
 
 Build server and pack into one archived jar
+
 > ./gradlew server:fatJar
 
 copy jar to server
+
 > scp zeapp/server/build/libs/server-1.0-SNAPSHOT-standalone.jar myamazingserver:
 
 log into server
+
 > ssh myamazingserver
 
 execute jar (jolo)
-> sudo java -jar *jar 80
+
+> sudo java -jar \*jar 80
 
 The last step started the remote webserver on port 80, with root rights. 🤓
 
 Ponder docker, k8n, virtualization and more fancy devops things, and then give up thinking you are a mobile dev ops. Unless you are, then [youre help is needed](https://github.com/gdg-berlin-android/ZeBadge/issues/new).
 
-# Droidcon 2024 contribution guide: 
+# Droidcon 2024 contribution guide:
 
 If you don't have a badge:
 
@@ -54,7 +59,7 @@ If you don't have a badge:
 If you already have a badge from Droidcon 2023:
 
 0. Visit GDG booth to get you badge flashed with the newest firmware.
-3. Open a new PR with some more changes and get one of the extension boards (WiFi module or a keyboard)
+1. Open a new PR with some more changes and get one of the extension boards (WiFi module or a keyboard)
 
 # Getting Started
 
@@ -81,7 +86,7 @@ App -->> Badge: New `name` page set
 Badge --> Badge: Save page
 Badge --> Badge: Show page `a` (name)
 Alice -->> Badge: Button 'b'
-Badge --> Badge: Show sponsor 1 page 
+Badge --> Badge: Show sponsor 1 page
 Alice -->> Badge: Button 'c'
 Badge --> Badge: Show sponsor 2 page
 Alice -->> Badge: Button 'up'
@@ -89,6 +94,7 @@ Badge --> Badge: Show user page `u`
 Alice -->> Badge: Button 'down'
 Badge --> Badge: Show user page `d`
 ```
+
 ### Contributors
 
 <a href="https://github.com/gdg-berlin-android/ZeBadge/graphs/contributors">
